@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-my-image {
+    background-image:linear-gradient(rgba(0,0,1,0.9), rgba(0,0,1,0.7)), url('../src/images/1.jpg') ;
+}
+
+.header{
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     min-height: 600px;
+     color: white;
+     position: relative;   
+ }
+ nav {
+    @apply transition duration-500 ease-in-out;
+  }
+
+
+  
+body {
+    font-family: 'Poppins', sans-serif;
+} 
+
+@media(max-width: 576px) {
+    body{
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+ }
+
+ /* .hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+ } */
+
+ /* .hamburger-top,
+ .hamburger-middle,
+ .hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: black;
+    transform: rotate(0);
+    transition: all 0.5s;
+ } */
+
+ /* .hamburger-middle{
+    transform:  translateY(7px);
+ }
+
+ .hamburger-bottom{
+    transform: translateY(14px);
+ } 
+
+ .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+ }
+
+ .open .hamburger-top {
+    transform: rotate(45deg) 
+    translateY(6px) translate(6px);
+ }
+
+ .open .hamburger-middle {
+    display: none;
+ }
+
+ .open .hamburger-bottom {
+    transform: rotate(-45deg) 
+    translateY(6px) translate(-6px);
+ } */
+ .custom-icon {
+   font-size: 50px; /* Adjust the size as needed */
+   /* color: rgb(147 197 253 / var(--tw-bg-opacity)); Adjust the color as needed */
+   color: black;
+ }
+ 

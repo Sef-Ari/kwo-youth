@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <!-- Corrected Ionicons script links -->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- Your content continues here -->
+
+<body class="font-poppins bg-gradient-to-t  to-[#a6c1ee] h-screen">
+    <header class="bg-blue-300">
+         <nav class="flex justify-between items-center w-full md:w-[92%] mx-auto sticky top-0 z-10">
+            <!-- <nav class="bg-gray-900 text-gray-100 px-4 py-3 flex justify-between items-center sticky top-0 z-10"></nav> -->
+            <div class=" py-5 text-blue-400 font-bold text-3xl">
+                <span class="text-white">Kwo</span>Youth
+            </div>
+            <div class="hidden md:block duration-200 md:static absolute bg-blue-300 md:min-h-fit min-h-[30vh] left-0 top-[100%] w-full md:w-auto items-center px-5 py-4"id="navLinks">
+                  <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] text-white gap-8 text-w">
+                    <li>
+                        <a class=" hover:text-gray-500" href="index.html">BLOG PAGE</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="gallery.html">GALLERY</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="About.html">ABOUT</a>
+                    </li>
+                  </ul>
+            </div>
+            <div class="flex items-center gap-6 ">
+                <button class="bg-blue-400 text-white px-5 py-2 rounded hover:bg-[#87acec]">sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+         </nav>
+    </header>
+    <header id="header" class="header relative h-screen">
+
+        <div id="slideshow"
+          class="absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center"
+          style="background-image: url(./images/LGAS-quaanpan.jpg)">
+        <div class="container mx-auto px-4 text-center md:text-left md:px-0">
+          <div class="py-40 items-center flex flex-col">
+            <h1 class="text-3xl font-bold mb-3 text-blue-100 md:text-5xl">Burlington Vermont 24/7</h1>
+            <h2 class="text-3xl font-bold mb-3 text-blue-100 md:text-5xl">Private Shuttle Service</h2>
+            <h2 class="text-xl font-bold mb-3 text-blue-100 md:text-3xl">Professional \* Reliable \* Affordable</h2>
+          </div>
+        </div>
+      
+      </header>
+    <script>
+        const images = [
+          './images/LGAS-quaanpan.jpg',
+          './images/pol-3.jpg',
+          './images/pstr3.jpg'
+        ];
+      
+        let currentIndex = 0;
+      
+        function nextBackground() {
+          currentIndex++;
+          if(currentIndex >= images.length) {
+            currentIndex = 0;
+          }
+      
+          document.getElementById('slideshow').style.backgroundImage = 
+        `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[currentIndex]}')`;
+        }
+      
+        setInterval(nextBackground, 5000);
+      </script>
+    <main>
+         <!-- <section id="about" class="flex bg-white p-36 text-black font-bold"> 
+            <img src="./images/images (1).png" alt="" class="hidden md:block mr-10">
+            <div class="p-4">
+                <p class="text-4xl font-bold text-black mb-4">Welcome to Kwon</p><br>
+                <p>Qua'an Pan Local Government was carved out of Shendam Local Government on 3 May 1989, by the Ibrahim Babangida regime. Qua'an Pan has two major tribes, the Pan and the Goemai. </p>
+                <p>The Pan people of Qua’an Pan are descended from Daffiar who migrated from parts unknown to present day Qua’an Pan. In the course of Daffiar’s migration, he eventually settled atop</p>
+                <p>a hill in present day Koffiar. His offspring decided to continue the migration in search of arable lands on the plains below the hill. They settled in various areas including present</p>
+                <p>day Doka and Kwa. In the course of the migration,</p>
+                <p>one of the Daffier’s children got tired at a certain location and declared "Dum mak", which means, "the journey is enough" in the local dialect. This formed the basis of the name of</p>
+                <p>present day Doemak. Daffiar also had a pair of twins who continued migrating and eventually settled in present day Namu. This is why Namu is known as Jep Jan, which means twins in</p> the local dialect.</p>
+            </div>
+            <img src="./images/images (1).png" alt="" class="md:hidden mx-auto mt-6">
+        </section> -->
+     <section id="about" class="flex flex-col bg-white p-6 md:p-36 text-black font-bold">
+    <img src="./images/images (1).png" alt="" class="mx-auto mb-6 md:hidden">
+    <div class="p-4 md:p-10">
+        <p class="text-2xl md:text-4xl font-bold text-black mb-4">Welcome to Kwon</p><br>
+        <p>Qua'an Pan Local Government was carved out of Shendam Local Government on 3 May 1989, by the Ibrahim Babangida regime. Qua'an Pan has two major tribes, the Pan and the Goemai. </p>
+        <p>The Pan people of Qua’an Pan are descended from Daffiar who migrated from parts unknown to present day Qua’an Pan. In the course of Daffiar’s migration, he eventually settled atop</p>
+        <p>a hill in present day Koffiar. His offspring decided to continue the migration in search of arable lands on the plains below the hill. They settled in various areas including present</p>
+        <p>day Doka and Kwa. In the course of the migration,</p>
+        <p>one of the Daffier’s children got tired at a certain location and declared "Dum mak", which means, "the journey is enough" in the local dialect. This formed the basis of the name of</p>
+        <p>present day Doemak. Daffiar also had a pair of twins who continued migrating and eventually settled in present day Namu. This is why Namu is known as Jep Jan, which means twins in</p> the local dialect.</p>
+    </div>
+    <img src="./images/images (1).png" alt="" class="hidden md:block mx-auto mt-6">
+</section>
+    </main>
+<footer class="bg-blue-400 text-black py-8 flex">
+    <div class="container mx-auto flex flex-wrap justify-between pl-20">
+        <!-- Address Section -->
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="text-lg font-semibold mb-4">Address</h2>
+            <p>Your Company Name</p>
+            <p>123 Main Street</p>
+            <p>City, State ZIP Code</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="text-lg font-semibold mb-4">Contact Us</h2>
+            <p>Email: info@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="w-full md:w-1/3">
+            <h2 class="text-lg font-semibold mb-4">Social Media</h2>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-black transition duration-300">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white hover:text-black transition duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-black transition duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end pr-8">
+        <img src="./images/logo.png" alt="Logo" class="h-20 md:h-30">
+      </div>
+    </footer>
+ <style>       
+@media (max-width: 768px) {
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #navLinks ul {
+        flex-direction: column;
+    }
+}
+
+</style>
+ <script>
+  function onToggleMenu() {
+    var navLinks = document.getElementById('navLinks');
+    if (window.innerWidth <= 768) {
+        navLinks.style.display = (navLinks.style.display === 'block') ? 'none' : 'block';
+    } else {
+        navLinks.style.display = 'block';
+    }
+}
+window.addEventListener('resize',()=> {
+    var navLinks = document.getElementById('navLinks'); // Define navLinks variable
+    if (window.innerWidth >= 768) {
+        navLinks.style.display = "block";
+    } 
+})
+
+ </script>
+</body> 
+</html>
